@@ -7,7 +7,6 @@ function HomePage() {
     return (
         <div>
             <body>
-
                 <div class="text-center">
                     <h1>WeBuilder</h1>
                     <h5>Build your website. Build your confidence.</h5>
