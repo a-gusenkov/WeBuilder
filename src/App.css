@@ -1,24 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&family=Montserrat&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
-body{
 
- 
+
+.body{
     
     background: #6D44C5;
+    
+}
+#navBar{
+  position: relative;
+  margin-top: 5%;
 }
 
+/* aboutMe.js */
+
+.aboutMe{
+  position: static;
+  display: block;
+  max-width: 80%;
+  padding: 15px 15px 15px 16px;
+  margin: 2rem 2rem;
+  overflow: hidden;
+  font-size: .8125rem;
+  line-height: 1.5;
+  text-align: center;
+  background-color: rgba(153, 42, 42, 0.05);
+}
 
 .text-center{
     position: absolute;
-    top: 20%;
+    top: 10%;
     width: 100%;
     max-width: 100%;
 }
 
 .text-center h1{
-    
-
-    
     font-family: Archivo;
     font-style: normal;
     font-weight: normal;
@@ -42,6 +58,17 @@ body{
 
 }
 
+#headerH3{
+font-family: Archivo;
+font-style: normal;
+font-weight: normal;
+font-size: 60px;
+line-height: 60px;
+text-align: center;
+
+color: #FFFFFF;
+}
+
 .text-center h4{
     position: relative;
     top: -30px;
@@ -55,7 +82,19 @@ body{
     color: #FFFFFF;
 }
 
-.btn{
+#headerH5{
+font-family: Archivo;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 20px;
+text-align: center;
+
+color: #E0C3F7;
+
+}
+
+#homeButton{
     position: relative;
     top: 100px;
 
@@ -73,6 +112,64 @@ body{
     transition-duration: 0.4s;
     cursor: pointer;
 }
+
+#back{
+  position: relative;
+  /*
+  bottom: 10px;
+  */
+  left: 5%;
+
+
+font-family: Archivo;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+line-height: 52px;
+text-align: center;
+border: #6D44C5;
+
+color: #FFFFFF;
+background: #6D44C5;
+}
+#back:hover {
+  text-decoration: underline;
+}
+
+#back:active {
+  text-decoration: underline;
+}
+
+#next{
+  position: relative;
+  
+  /*bottom: 10px;*/
+  left: 75%;
+  
+  
+font-family: Archivo;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+line-height: 52px;
+text-align: center;
+border: #6D44C5;
+
+color: #FFFFFF;
+background: #6D44C5;
+
+}
+
+#next:hover {
+  text-decoration: underline;
+}
+
+#next:active {
+  text-decoration: underline;
+}
+
+
+
 /*
 .button {
 
@@ -96,7 +193,7 @@ body{
 */
 /*-------------------------------Customized Check box-------------------------*/
 /* Customize the label (the container) */
-.container {
+.position-relative .container {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -112,7 +209,7 @@ body{
   }
   
   /* Hide the browser's default checkbox */
-  .container input {
+  .position-relative .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -132,12 +229,12 @@ body{
   }
   
   /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
+  .position-relative .container:hover input ~ .checkmark {
     background-color: #ccc;
   }
   
   /* When the checkbox is checked, add a blue background */
-  .container input:checked ~ .checkmark {
+  .position-relative .container input:checked ~ .checkmark {
     background-color: #2196F3;
   }
   
@@ -149,12 +246,12 @@ body{
   }
   
   /* Show the checkmark when checked */
-  .container input:checked ~ .checkmark:after {
+  .position-relative .container input:checked ~ .checkmark:after {
     display: block;
   }
   
   /* Style the checkmark/indicator */
-  .container .checkmark:after {
+  .position-relative .container .checkmark:after {
     left: 10px;
     top: 5px;
     width: 15px;
