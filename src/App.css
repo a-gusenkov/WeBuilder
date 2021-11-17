@@ -25,11 +25,11 @@
   position: static;
   display: block;
   max-width: 80%;
-  padding: 15px 15px 15px 16px;
-  margin: 2rem 2rem;
+  padding: 10px;
+  margin: 0.5rem 2.5rem;
   overflow: hidden;
-  font-size: .8125rem;
-  line-height: 1.5;
+  font-size: .7125rem;
+  line-height: 1.2;
   text-align: center;
   background-color: rgba(153, 42, 42, 0.05);
 }
@@ -107,7 +107,7 @@ color: #E0C3F7;
 
 #homeButton{
     position: relative;
-    top: 100px;
+    top: 50px;
 
 
     background: #C2A5FF;
@@ -119,7 +119,7 @@ color: #E0C3F7;
     display: inline-block;
     font-size: 36px;
     font-family: Archivo;
-    margin: 4px 2px;
+    margin: auto;
     transition-duration: 0.4s;
     cursor: pointer;
 }

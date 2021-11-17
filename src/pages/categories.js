@@ -36,9 +36,9 @@ class Categories extends React.Component {
             <div>
                 <body>
                     <Helmet>
-                        <style>{'body { background: #6D44C5; }'}</style>
+                        <style>{'body { background: #6D44C5;'}</style>
                     </Helmet>
-                    <div className="text-center">
+                    <div className="text-center" style={{margin:'20px'}}>
 
                         <h4>What categories do you want in your website?</h4>
 

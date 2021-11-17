@@ -16,7 +16,7 @@ function AboutMe() {
                 <div class="offset container mt-3 mb-5">
                     <div class="row">
                         <div id="navBar" class="col-lg-4 col-md-4 col-12">
-                            <NavBar />
+                            <NavBar />    
                         </div>
 
                         <div id="content" class="col-lg-8 col-md-8 col-12">
@@ -24,7 +24,7 @@ function AboutMe() {
                             <h5 id="headerH5">Choose the layout of your about me section.</h5>
                             <AboutMeLayouts />
                         </div>
-                    </div>
+                    </div>   
                 </div>
                 <button onClick={() => {
                     history.push('/themes')
