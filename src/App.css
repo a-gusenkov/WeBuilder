@@ -12,6 +12,13 @@
   margin-top: 5%;
 }
 
+/* HomePage.js */
+.img-fluid-logo {
+  margin-top: -100px;
+  margin-bottom: -150px;
+  width: 50%;
+}
+
 /* aboutMe.js */
 
 .aboutMe{
@@ -56,6 +63,10 @@
     color: #FFFFFF;
 
 
+}
+
+.nextBack {
+   width: 50%;
 }
 
 #headerH3{
