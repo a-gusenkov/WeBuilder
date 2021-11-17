@@ -17,6 +17,7 @@ class Categories extends React.Component {
                 Projects: false,
                 "Contact Me": false,
 
+
             }
         }
 

@@ -9,6 +9,7 @@ import Education from "./pages/education";
 import Experience from "./pages/experience";
 import Projects from "./pages/projects";
 import ContactMe from "./pages/contactMe";
+import { UserContext } from "./pages/userContext";
 
 
 
@@ -19,15 +20,18 @@ function App() {
     <Router exact path="/">
       <Redirect to="/homePage" />
       <Switch>
-        <Route exact path="/homePage" component={HomePage} />
-        <Route exact path="/categories" component={Categories} />
-        <Route exact path="/themes" component={Themes} />
-        <Route exact path="/aboutMe" component={AboutMe} />
-        <Route exact path="/education" component={Education} />
-        <Route exact path="/experience" component={Experience} />
-        <Route exact path="/projects" component={Projects} />
-        <Route exact path="/contactMe" component={ContactMe} />
+        <UserContext.Provider value="hello">
+          <Route exact path="/homePage" component={HomePage} />
+          <Route exact path="/categories" component={Categories} />
+          <Route exact path="/themes" component={Themes} />
+          <Route exact path="/aboutMe" component={AboutMe} />
+          <Route exact path="/education" component={Education} />
+          <Route exact path="/experience" component={Experience} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/contactMe" component={ContactMe} />
+        </UserContext.Provider>
       </Switch>
+
     </Router>
 
   );

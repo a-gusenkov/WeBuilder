@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 import NavBar from './navBar';
+import { UserContext } from './userContext';
 function Themes() {
     let history = useHistory();
+    const msg = useContext(UserContext);
     return (
         <div>
             <body>
@@ -20,7 +22,7 @@ function Themes() {
                         <div id="content" class="col-lg-8 col-md-8 col-12">
                             <h3 id="headerH3">Themes</h3>
                             <h5 id="headerH5">Choose the theme of your website.</h5>
-
+                            <h5>{msg}</h5>
                         </div>
                     </div>
 
