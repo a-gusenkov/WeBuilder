@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 
 class Categories extends React.Component {
 
-
+   
     constructor(props) {
         super(props);
         this.state = {
@@ -32,16 +32,14 @@ class Categories extends React.Component {
         console.log(this.state.category);
     }
 
-
     render() {
-
         return (
             <div>
                 <body>
                     <Helmet>
-                        <style>{'body { background: #6D44C5; }'}</style>
+                        <style>{'body { background: #6D44C5;'}</style>
                     </Helmet>
-                    <div class="text-center">
+                    <div className="text-center" style={{margin:'20px'}}>
 
                         <h4>What categories do you want in your website?</h4>
 
@@ -91,9 +89,13 @@ class Categories extends React.Component {
                                 <span class="checkmark"></span>
                             </label>
 */}
+                        
                         </div>
+                        <div className="nextBack">
                         <NextBack />
+                        </div>
                     </div>
+                    
 
                     {/*
                 <button onClick={() => {
@@ -104,6 +106,7 @@ class Categories extends React.Component {
                     history.push('/themes')
                 }} href={'/themes'} id="next">Next</button>
             */}
+                    
                 </body >
             </div >
         );

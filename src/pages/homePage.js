@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useHistory } from "react-router-dom";
-
+import logo from './../pics/weBuilder.png';
 
 function HomePage() {
 
@@ -13,8 +13,8 @@ function HomePage() {
                     <style>{'body { background: #6D44C5; }'}</style>
                 </Helmet>
                 <div class="text-center">
-                    <h1>WeBuilder</h1>
-                    <h5>Build your website. Build your confidence.</h5>
+                    <img src={logo} className="img-fluid-logo" alt="logo"></img>
+                     <h4>Build your website. Build your confidence.</h4>
                     <button onClick={() => {
                         history.push('/categories')
                     }}
