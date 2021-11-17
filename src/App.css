@@ -21,6 +21,13 @@ body{
   background-color: rgba(153, 42, 42, 0.05);
 }
 
+/* HomePage.js */
+.img-fluid-logo {
+  margin-top: -250px;
+  margin-bottom: -150px;
+  width: 50%;
+}
+
 .text-center{
     position: absolute;
     top: 20%;

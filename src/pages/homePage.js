@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
+import logo from './../pics/weBuilder.png';
 
 function HomePage() {
 
@@ -8,8 +9,8 @@ function HomePage() {
         <div>
             <body>
                 <div class="text-center">
-                    <h1>WeBuilder</h1>
-                    <h5>Build your website. Build your confidence.</h5>
+                    <img src={logo} className="img-fluid-logo" alt="logo"></img>
+                    <h4>Build your website. Build your confidence.</h4>
                     <button onClick={() => {
                         history.push('/categories')
                     }}
