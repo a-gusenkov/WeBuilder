@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 import '../App.css';
-import avatar from './../pics/avatar.svg';
+import logo from './../pics/WeBuilderLogo.png';
 import './../pages/navBar.css';
 
-class AboutMeLayouts extends Component {
+class ProjectLayouts extends Component {
 
     constructor(props) {
         super(props);
@@ -37,14 +37,15 @@ class AboutMeLayouts extends Component {
                     onClick={this.boxClick_One}>
                     <Card className="color-nav" style={{ padding: '20px', height: '14rem', borderRadius: '25px' }}>
                         <div className="row no-gutters">
-                            <div className="col">
-                                <img src={avatar} className="img-fluid" alt="avatar" width="80%"></img>
+                            <div className="col" style={{ margin: "auto" }}>
+                                <img src={logo} className="img-fluid" alt="avatar" width="80%"></img>
                             </div>
                             <div className="col-7">
                                 <div className="card-block px-2">
-                                    <Card.Title style={{ paddingTop: "20px" }}>FirstName LastName</Card.Title>
-                                    <Card.Subtitle style={{ paddingBottom: "10px" }}>Mover. Shaker. Creator.</Card.Subtitle>
-                                    <Card.Text>Welcome to my portfolio. I invite you to explore my site to get a better understanding of my specialties, technique and professional experience. What you’ll find below is a combination of commissioned work, as well as some personal passion projects of my own. Enjoy browsing, and get in touch with any questions.</Card.Text>
+                                    <Card.Title style={{ paddingTop: "20px" }}>Project 1</Card.Title>
+                                    <Card.Subtitle style={{ paddingBottom: "10px" }}>A Portfolio Builder</Card.Subtitle>
+                                    <Card.Text>blblablabllablalabalbla</Card.Text>
+                                    <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span>
                                 </div>
                             </div>
                         </div>
@@ -56,13 +57,14 @@ class AboutMeLayouts extends Component {
                         <div className="row no-gutters">
                             <div className="col-7">
                                 <div className="card-block px-2">
-                                    <Card.Title style={{ paddingTop: "20px" }}>FirstName LastName</Card.Title>
-                                    <Card.Subtitle style={{ paddingBottom: "10px" }}>Mover. Shaker. Creator.</Card.Subtitle>
-                                    <Card.Text>Welcome to my portfolio. I invite you to explore my site to get a better understanding of my specialties, technique and professional experience. What you’ll find below is a combination of commissioned work, as well as some personal passion projects of my own. Enjoy browsing, and get in touch with any questions.</Card.Text>
+                                    <Card.Title style={{ paddingTop: "20px" }}>Project 1</Card.Title>
+                                    <Card.Subtitle style={{ paddingBottom: "10px" }}>A Protfolio Builder</Card.Subtitle>
+                                    <Card.Text>blblablabllablalabalbla</Card.Text>
+                                    <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span>
                                 </div>
                             </div>
-                            <div className="col">
-                                <img src={avatar} className="img-fluid" alt="avatar" width="80%"></img>
+                            <div className="col" style={{ margin: "auto" }}>
+                                <img src={logo} className="img-fluid" alt="avatar" width="80%"></img>
                             </div>
                         </div>
                     </Card>
@@ -72,4 +74,4 @@ class AboutMeLayouts extends Component {
     }
 }
 
-export default AboutMeLayouts;
+export default ProjectLayouts;
