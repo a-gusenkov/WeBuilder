@@ -14,13 +14,14 @@ import { UserContext } from "./pages/userContext";
 
 
 function App() {
+  const { category } = new Categories();
 
 
   return (
     <Router exact path="/">
       <Redirect to="/homePage" />
       <Switch>
-        <UserContext.Provider value="hello">
+        <UserContext.Provider value={category}>
           <Route exact path="/homePage" component={HomePage} />
           <Route exact path="/categories" component={Categories} />
           <Route exact path="/themes" component={Themes} />

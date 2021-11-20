@@ -6,7 +6,6 @@ import { Helmet } from 'react-helmet';
 
 class Categories extends React.Component {
 
-   
     constructor(props) {
         super(props);
         this.state = {
@@ -16,13 +15,10 @@ class Categories extends React.Component {
                 Experience: false,
                 Projects: false,
                 "Contact Me": false,
-
-
             }
         }
-
-
     }
+
 
     handleCheckBox = event => {
 
@@ -34,14 +30,16 @@ class Categories extends React.Component {
 
     render() {
         return (
+            this.state.category,
             <div>
                 <body>
                     <Helmet>
                         <style>{'body { background: #6D44C5;'}</style>
                     </Helmet>
-                    <div className="text-center" style={{margin:'20px'}}>
+                    <div className="text-center" style={{ margin: '20px' }}>
 
                         <h4>What categories do you want in your website?</h4>
+                        <h4>{this.state.category.Projects.toString()}</h4>
 
                         <div class="position-relative">
 
@@ -89,24 +87,12 @@ class Categories extends React.Component {
                                 <span class="checkmark"></span>
                             </label>
 */}
-                        
+
                         </div>
                         <div className="nextBack">
-                        <NextBack />
+                            <NextBack />
                         </div>
                     </div>
-                    
-
-                    {/*
-                <button onClick={() => {
-                    history.push('/homePage')
-                }} href={'/themes'} id="back">Back</button>
-
-                <button onClick={() => {
-                    history.push('/themes')
-                }} href={'/themes'} id="next">Next</button>
-            */}
-                    
                 </body >
             </div >
         );
