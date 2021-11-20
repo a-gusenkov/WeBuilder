@@ -21,6 +21,12 @@ function NavBar() {
 
                         <Nav className="flex-column">
                             <p className="nav-heading"> Layout </p>
+
+                            <Nav.Link onClick={() => {
+                                history.push('/categories')
+                            }}><p className="nav-lin">Categories</p>
+                            </Nav.Link>
+
                             <Nav.Link onClick={() => {
                                 history.push('/themes')
                             }}><p className="nav-lin">Themes</p>

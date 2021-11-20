@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 import NavBar from './navBar';
+import { Redirect } from 'react-router-dom';
+import { UserContext } from './userContext';
+
 function Projects() {
+
     let history = useHistory();
-    return (
-        <div>
-            <body>
+    const msg = useContext(UserContext);
+
+    if (msg.Projects) {
+        return (
+            <div>
                 <Helmet>
                     <style>{'body { background: #6D44C5; }'}</style>
                 </Helmet>
@@ -27,13 +33,15 @@ function Projects() {
                 </div>
                 <button onClick={() => {
                     history.push('/experience')
-                }} href={'/experience'} id="back">Back</button>
+                }} id="back">Back</button>
 
                 <button onClick={() => {
                     history.push('/contactMe')
-                }} href={'/contactMe'} id="next">Next</button>
-            </body>
-        </div>
-    );
+                }} id="next">Next</button>
+            </div>
+        );
+    } else {
+        return <Redirect to="/contactMe" />
+    }
 }
 export default Projects;

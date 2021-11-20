@@ -1,6 +1,7 @@
 
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import './App.css';
+import React from 'react';
 import HomePage from './pages/homePage';
 import Categories from './pages/categories';
 import Themes from "./pages/themes";
@@ -13,29 +14,52 @@ import { UserContext } from "./pages/userContext";
 
 
 
-function App() {
-  const { category } = new Categories();
+class App extends React.Component {
 
 
-  return (
-    <Router exact path="/">
-      <Redirect to="/homePage" />
-      <Switch>
-        <UserContext.Provider value={category}>
-          <Route exact path="/homePage" component={HomePage} />
-          <Route exact path="/categories" component={Categories} />
-          <Route exact path="/themes" component={Themes} />
-          <Route exact path="/aboutMe" component={AboutMe} />
-          <Route exact path="/education" component={Education} />
-          <Route exact path="/experience" component={Experience} />
-          <Route exact path="/projects" component={Projects} />
-          <Route exact path="/contactMe" component={ContactMe} />
-        </UserContext.Provider>
-      </Switch>
+  constructor(props) {
+    super(props);
+    this.state = {
+      category: {
+        AboutMe: false,
+        Education: false,
+        Experience: false,
+        Projects: false,
+        ContactMe: false,
+      }
+    }
+  }
 
-    </Router>
 
-  );
+  handleCheckBox = event => {
+
+    let state = this.state;
+    state.category[event.target.value] = event.target.checked;
+    this.setState(state);
+    console.log(this.state.category);
+  }
+
+  render() {
+    return (
+      <Router exact path="/">
+        <Redirect to="/homePage" />
+        <Switch>
+          <UserContext.Provider value={this.state.category}>
+            <Route exact path="/homePage" component={HomePage} />
+            <Route exact path="/categories" render={(props) => <Categories {...props} category={this.state.category} changeHandler={this.handleCheckBox} />} />
+            <Route exact path="/themes" component={Themes} />
+            <Route exact path="/aboutMe" component={AboutMe} />
+            <Route exact path="/education" component={Education} />
+            <Route exact path="/experience" component={Experience} />
+            <Route exact path="/projects" component={Projects} />
+            <Route exact path="/contactMe" component={ContactMe} />
+          </UserContext.Provider>
+        </Switch>
+
+      </Router>
+
+    );
+  }
 }
 
 export default App;

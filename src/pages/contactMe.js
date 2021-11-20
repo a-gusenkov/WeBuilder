@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 import NavBar from './navBar';
+import { Redirect } from 'react-router-dom';
+import { UserContext } from './userContext';
+
 function ContactMe() {
+
     let history = useHistory();
+    const msg = useContext(UserContext);
+
+    {/*if (msg.ContactMe) {*/ }
     return (
         <div>
             <body>
@@ -35,5 +42,11 @@ function ContactMe() {
             </body>
         </div>
     );
+    {/*     
+    } else {
+        return <Redirect to="/contactMe" />
+    
+    }
+*/}
 }
 export default ContactMe;

@@ -4,57 +4,33 @@ import NextBack from './nextBack';
 import { Helmet } from 'react-helmet';
 
 
-class Categories extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            category: {
-                "About Me/ Bio": false,
-                Education: false,
-                Experience: false,
-                Projects: false,
-                "Contact Me": false,
-            }
-        }
-    }
+function Categories(props) {
 
 
-    handleCheckBox = event => {
+    return (
+        <div>
+            <body>
+                <Helmet>
+                    <style>{'body { background: #6D44C5;'}</style>
+                </Helmet>
+                <div className="text-center" style={{ margin: '20px' }}>
 
-        let state = this.state;
-        state.category[event.target.value] = event.target.checked;
-        this.setState(state);
-        console.log(this.state.category);
-    }
+                    <h4>What categories do you want in your website?</h4>
 
-    render() {
-        return (
-            this.state.category,
-            <div>
-                <body>
-                    <Helmet>
-                        <style>{'body { background: #6D44C5;'}</style>
-                    </Helmet>
-                    <div className="text-center" style={{ margin: '20px' }}>
+                    <div class="position-relative">
 
-                        <h4>What categories do you want in your website?</h4>
-                        <h4>{this.state.category.Projects.toString()}</h4>
+                        {Object.keys(props.category).map(cat => {
+                            return <label class="container">
+                                {cat}
+                                <input onChange={props.changeHandler} type="checkbox"
+                                    name="category"
+                                    value={cat}
+                                    checked={props.category[cat]} />
+                                <span class="checkmark"></span>
+                            </label>
+                        })}
 
-                        <div class="position-relative">
-
-                            {Object.keys(this.state.category).map(cat => {
-                                return <label class="container">
-                                    {cat}
-                                    <input onChange={this.handleCheckBox} type="checkbox"
-                                        name="category"
-                                        value={cat}
-                                        checked={this.state.category[cat]} />
-                                    <span class="checkmark"></span>
-                                </label>
-                            })}
-
-                            {/*
+                        {/*
                             <label class="container">Education
                                 <input onChange={this.handleCheckBox} type="checkbox"
                                     name="category"
@@ -88,15 +64,15 @@ class Categories extends React.Component {
                             </label>
 */}
 
-                        </div>
-                        <div className="nextBack">
-                            <NextBack />
-                        </div>
                     </div>
-                </body >
-            </div >
-        );
+                    <div className="nextBack">
+                        <NextBack />
+                    </div>
+                </div>
+            </body >
+        </div >
+    );
 
-    }
 }
+
 export default Categories;
