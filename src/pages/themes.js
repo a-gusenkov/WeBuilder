@@ -2,6 +2,8 @@ import React from 'react';
 import { useHistory } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 import NavBar from './navBar';
+import ThemeLayouts from '../layouts/themeLayouts';
+
 function Themes() {
     let history = useHistory();
     return (
@@ -20,7 +22,7 @@ function Themes() {
                         <div id="content" class="col-lg-8 col-md-8 col-12">
                             <h3 id="headerH3">Themes</h3>
                             <h5 id="headerH5">Choose the theme of your website.</h5>
-
+                            <ThemeLayouts />
                         </div>
                     </div>
 

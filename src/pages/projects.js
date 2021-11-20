@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 import NavBar from './navBar';
+import ProjectLayouts from '../layouts/projectLayouts';
 function Projects() {
     let history = useHistory();
     return (
@@ -20,7 +21,7 @@ function Projects() {
                         <div id="content" class="col-lg-8 col-md-8 col-12">
                             <h3 id="headerH3">Projects</h3>
                             <h5 id="headerH5">Choose the layout of your projects section.</h5>
-
+                            <ProjectLayouts />
                         </div>
                     </div>
 

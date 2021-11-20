@@ -33,7 +33,7 @@ class EducationLayouts extends Component {
             <div>
                 <div className="aboutMe" style={{ backgroundColor: this.state.bgColor_One }}
                     onClick={this.boxClick_One}>
-                    <Card style={{ backgroundColor: '#C2A5FF', padding: '20px', height: '14rem'  }}>
+                    <Card style={{ padding: '20px', height: '14rem', borderRadius: '25px'  }}>
                         <div className="row no-gutters">
                             <div className="col-2">
                                 <img src={logo} className="img-fluid" alt="logo" style={{ justifyContent: 'center', padding: '20px', marginTop: '20px' }} width="100%" height="100%"></img>
@@ -51,7 +51,7 @@ class EducationLayouts extends Component {
                 </div>
                 <div className="aboutMe" style={{ backgroundColor: this.state.bgColor_Two }}
                     onClick={this.boxClick_Two}>
-                    <Card style={{ backgroundColor: '#C2A5FF', padding: '20px', height: '14rem'  }}>
+                    <Card style={{ padding: '20px', height: '14rem', borderRadius: '25px'   }}>
                         <div className="row no-gutters">
                             <div className="col">
                                 <div className="card-block px-2">

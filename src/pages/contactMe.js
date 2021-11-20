@@ -2,6 +2,8 @@ import React from 'react';
 import { useHistory } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 import NavBar from './navBar';
+import ContactMeLayouts from '../layouts/contactMeLayouts';
+
 function ContactMe() {
     let history = useHistory();
     return (
@@ -20,7 +22,7 @@ function ContactMe() {
                         <div id="content" class="col-lg-8 col-md-8 col-12">
                             <h3 id="headerH3">Contact Me</h3>
                             <h5 id="headerH5">Choose the layout of your contact me section.</h5>
-
+                            <ContactMeLayouts />
                         </div>
                     </div>
 
