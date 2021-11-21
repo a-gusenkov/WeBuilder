@@ -6,6 +6,7 @@ import NavBar from './navBar';
 import { Redirect } from 'react-router-dom';
 import { UserContext } from './userContext';
 
+import ExperienceLayouts from '../layouts/experienceLayouts';
 function Experience() {
 
     let history = useHistory();
@@ -27,6 +28,7 @@ function Experience() {
                         <div id="content" class="col-lg-8 col-md-8 col-12">
                             <h3 id="headerH3">Experience</h3>
                             <h5 id="headerH5">Choose the layout of your experience section.</h5>
+                            <ExperienceLayouts />
                         </div>
 
                     </div>

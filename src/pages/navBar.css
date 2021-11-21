@@ -17,11 +17,7 @@ html, body, #root, .NavBar {
   }
   /* container css makes whole container centeres */
   .center{
-    justify-content: center;
     display: flex;
-    min-height: 100%;
-    align-content:center;
-    justify-content: center;
     flex-direction: column;
     margin-top: 15%;
   }
@@ -34,7 +30,7 @@ html, body, #root, .NavBar {
     line-height: 52px;
     line-height: 100%;
     vertical-align: Top;  
-    
+    text-align: center;
   }
   /*Nav bar edits like color, and shadow behind the nav bar*/
   .color-nav{
@@ -57,7 +53,7 @@ html, body, #root, .NavBar {
     font-size: 1.4em;
     font-weight: 400;
     margin: 0px;
-   
+    text-align: center;
   }
   .nav-lin:hover{
     color:#0C0B0C !important;

@@ -30,40 +30,6 @@ function Categories(props) {
                             </label>
                         })}
 
-                        {/*
-                            <label class="container">Education
-                                <input onChange={this.handleCheckBox} type="checkbox"
-                                    name="category"
-                                    value="education"
-                                    checked={this.state.category.education} />
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="container">Experience
-                                <input onChange={this.handleCheckBox} type="checkbox"
-                                    name="category"
-                                    value="experience"
-                                    checked={this.state.category.experience} />
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="container">Projects
-                                <input onChange={this.handleCheckBox} type="checkbox"
-                                    name="category"
-                                    value="projects"
-                                    checked={this.state.category.projects} />
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="container">Contact Me
-                                <input onChange={this.handleCheckBox} type="checkbox"
-                                    name="category"
-                                    value="contactme"
-                                    checked={this.state.category.contactme} />
-                                <span class="checkmark"></span>
-                            </label>
-*/}
-
                     </div>
                     <div className="nextBack">
                         <NextBack />
