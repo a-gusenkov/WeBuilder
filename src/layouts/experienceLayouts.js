@@ -80,6 +80,7 @@ class ExperienceLayouts extends Component {
                         </div>
                     </Card>
                 </div>
+                {/*
                 <div className="aboutMe" style={{ backgroundColor: this.state.bgColor_Three }}
                     onClick={this.boxClick_Three}>
                     <Card style={{ backgroundColor: '#C2A5FF', padding: '20px', height: '14rem', borderRadius: '25px'    }}>
@@ -96,6 +97,7 @@ class ExperienceLayouts extends Component {
                         </div>
                     </Card>
                 </div>
+                */}
             </div>
         );
     }

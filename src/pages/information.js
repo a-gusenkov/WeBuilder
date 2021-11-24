@@ -8,6 +8,8 @@ import ReactDOM from 'react-dom';
 import TextBox from '../layouts/textbox';
 import TextBoxWPic from '../layouts/textbox-w-pic';
 import {FormControl,Form} from 'react-bootstrap';
+import TextBoxAboutMe from "../layouts/textbox-aboutme";
+import TextBoxContactMe from "../layouts/textbox-contactme";
 
     
 /*      
@@ -39,21 +41,7 @@ function Information() {
                                   <div>
                                     <Row> <h3 className="enter-head"> About Me </h3></Row>
                                     <Row >   
-                                      <Form.Group controlId="formFile" className="mb-3 input-file">
-                                      <Form.Label>Input About Me Picture</Form.Label>
-                                      <Form.Control type="file" />
-                                      </Form.Group>
-                                    </Row>
-                    
-                                    <Row > 
-                                      <Col >
-                                        <form>
-                                          <p className="section-description"> Enter Your About Me Text Here: </p>
-                                          <label className="label-width">
-                                           <textarea className="description-input" rows={5}> </textarea>
-                                          </label>
-                                        </form> 
-                                      </Col> 
+                                      <TextBoxAboutMe/>
                                     </Row>
                                   </div>
 
@@ -71,6 +59,11 @@ function Information() {
                                     <h3 className="enter-head">Projects </h3>
                                   
                                     <Row> <Col> <TextBoxWPic /> </Col> </Row>
+                                  </div>
+                                  <div>
+                                    <Row><h3 className="enter-head">Contact Me </h3></Row>
+                  
+                                    <Row> <Col> <TextBoxContactMe /> </Col> </Row>
                                   </div>
                         </Container>
 

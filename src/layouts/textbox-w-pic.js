@@ -18,7 +18,7 @@ class TextBoxWPic extends React.Component {
   createName(){
      return this.state.name.map((el, i) => 
          <div key={i}>
-                <Form.Group controlId="formFile" className="mb-3 input-file">
+                <Form.Group controlId="formFile" className="mb-3 input-file section-description">
                 <Form.Label>Input Project Picture</Form.Label>
                 <Form.Control type="file" />
                 </Form.Group> 

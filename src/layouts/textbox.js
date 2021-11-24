@@ -25,7 +25,7 @@ class TextBox extends React.Component {
      )
   }
   createDescription(){
-       return  this.state.name.map((el, i) => 
+       return  this.state.description.map((el, i) => 
            <div key={i}>
             <textarea  description={el||''}  className="description-input" placeholder="Description" onChange={this.handleChangeDescription.bind(this, i)} rows={5}/>
             
@@ -45,7 +45,7 @@ class TextBox extends React.Component {
   }
   
   addClick(){
-    /*TextBox.setState(prevState => ({ values: [...prevState.values, '']}))*/
+   
     this.setState(prevState => ({ name: [...prevState.name, '']}))
     this.setState(prevState => ({ description: [...prevState.description, '']}))
   }

@@ -38,12 +38,11 @@ class ContactMeLayouts extends Component {
                         <div className="row no-gutters">
                                 <div className="card-block px-2">
                                     <Card.Title>Contact Me</Card.Title>
-                                    <a href={() => false} className="fa fa-facebook"></a>
-                                    <a href={() => false} className="fa fa-twitter"></a>
-                                    <a href={() => false} className="fa fa-google"></a>
+                                    
+                                    <a href={() => false} className="fa fa-github"></a>
                                     <a href={() => false} className="fa fa-linkedin"></a>
                                     <a href={() => false} className="fa fa-envelope"></a>
-                                    <a href={() => false} className="fa fa-instagram"></a>
+                                    
                                 </div>
                             
                         </div>
@@ -55,12 +54,11 @@ class ContactMeLayouts extends Component {
                         <div className="row no-gutters">
                                 <div className="card-block px-2">
                                     <Card.Title>Contact Me</Card.Title>
-                                    <a href={() => false} style={{ marginRight: "20%" }} className="fa fa-facebook"></a>
-                                    <a href={() => false} style={{ marginRight: "20%" }} className="fa fa-twitter"></a>
-                                    <a href={() => false} className="fa fa-google"></a>
+                                    
+                                    <a href={() => false} style={{ marginRight: "20%" }} className="fa fa-github"></a>
                                     <a href={() => false} style={{ marginRight: "20%" }} className="fa fa-linkedin"></a>
                                     <a href={() => false} style={{ marginRight: "20%" }} className="fa fa-envelope"></a>
-                                    <a href={() => false} className="fa fa-instagram"></a>
+                                    
                                 </div>
                         </div>         
                     </Card>

@@ -38,8 +38,8 @@ function ContactMe() {
                 }} href={'/projects'} id="back">Back</button>
 
                 <button onClick={() => {
-                    history.push('/contactMe')
-                }} href={'/projects'} id="next">Next</button>
+                    history.push('/information')
+                }} href={'/information'} id="next">Next</button>
             </body>
         </div>
     );
