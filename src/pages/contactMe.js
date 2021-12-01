@@ -11,10 +11,9 @@ function ContactMe() {
     let history = useHistory();
     const msg = useContext(UserContext);
 
-    {/*if (msg.ContactMe) {*/ }
-    return (
-        <div>
-            <body>
+    if (msg.ContactMe) {
+        return (
+            <div>
                 <Helmet>
                     <style>{'body { background: #6D44C5; }'}</style>
                 </Helmet>
@@ -22,7 +21,6 @@ function ContactMe() {
                     <div class="row">
                         <div id="navBar" class="col-lg-4 col-md-4 col-12">
                             <NavBar />
-
                         </div>
 
                         <div id="content" class="col-lg-8 col-md-8 col-12">
@@ -35,19 +33,16 @@ function ContactMe() {
                 </div>
                 <button onClick={() => {
                     history.push('/projects')
-                }} href={'/projects'} id="back">Back</button>
+                }} id="back">Back</button>
 
                 <button onClick={() => {
-                    history.push('/contactMe')
-                }} href={'/projects'} id="next">Next</button>
-            </body>
-        </div>
-    );
-    {/*     
+                    history.push('/information')
+                }} id="next">Next</button>
+            </div>
+        );
     } else {
-        return <Redirect to="/contactMe" />
-    
+        return <Redirect to="/information" />
+
     }
-*/}
 }
 export default ContactMe;

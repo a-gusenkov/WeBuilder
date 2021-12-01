@@ -46,7 +46,7 @@ class ExperienceLayouts extends Component {
             <div>
                 <div className="aboutMe" style={{ backgroundColor: this.state.bgColor_One }}
                     onClick={this.boxClick_One}>
-                    <Card style={{ backgroundColor: '#C2A5FF', padding: '20px', height: '14rem', borderRadius: '25px'   }}>
+                    <Card style={{ backgroundColor: '#C2A5FF', padding: '20px', height: '14rem', borderRadius: '25px' }}>
                         <div className="row no-gutters">
                             <div className="col">
                                 <img src={logo} className="img-fluid" alt="avatar" width="80%"></img>
@@ -64,7 +64,7 @@ class ExperienceLayouts extends Component {
                 </div>
                 <div className="aboutMe" style={{ backgroundColor: this.state.bgColor_Two }}
                     onClick={this.boxClick_Two}>
-                    <Card style={{ backgroundColor: '#C2A5FF', padding: '20px', height: '14rem', borderRadius: '25px'   }}>
+                    <Card style={{ backgroundColor: '#C2A5FF', padding: '20px', height: '14rem', borderRadius: '25px' }}>
                         <div className="row no-gutters">
                             <div className="col-7">
                                 <div className="card-block px-2">
@@ -80,6 +80,7 @@ class ExperienceLayouts extends Component {
                         </div>
                     </Card>
                 </div>
+                {/*
                 <div className="aboutMe" style={{ backgroundColor: this.state.bgColor_Three }}
                     onClick={this.boxClick_Three}>
                     <Card style={{ backgroundColor: '#C2A5FF', padding: '20px', height: '14rem', borderRadius: '25px'    }}>
@@ -96,6 +97,7 @@ class ExperienceLayouts extends Component {
                         </div>
                     </Card>
                 </div>
+                */}
             </div>
         );
     }
