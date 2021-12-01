@@ -10,8 +10,9 @@ import Education from "./pages/education";
 import Experience from "./pages/experience";
 import Projects from "./pages/projects";
 import ContactMe from "./pages/contactMe";
-import { UserContext } from "./pages/userContext";
 import Information from "./pages/information";
+import { UserContext } from "./pages/userContext";
+
 
 
 class App extends React.Component {

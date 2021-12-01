@@ -25,20 +25,13 @@ class TextBoxContactMe extends React.Component {
     }
 
     render() {
-        if (this.props.category) {
-            return (
-                <div>
-                    <Row><h3 className="enter-head">{this.props.name} </h3></Row>
-                    <form>
-                        <input type="text" name={''} className="github-input" placeholder="GitHub Link" />
-                        <input type="text" name={''} className="linkedin-input" placeholder="LinkedIn Link" />
-                        <input type="text" name={''} className="email-input" placeholder="Email Link" />
-                    </form>
-                </div>
-            );
-        } else {
-            return (null);
-        }
+        return (
+            <form>
+                <input type="text" name={''} className="github-input" placeholder="GitHub Link" />
+                <input type="text" name={''} className="linkedin-input" placeholder="LinkedIn Link" />
+                <input type="text" name={''} className="email-input" placeholder="Email Link" />
+            </form>
+        );
     }
 }
 

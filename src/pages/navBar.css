@@ -18,7 +18,7 @@ html, body, #root, .NavBar {
   /* container css makes whole container centeres */
   .center{
     display: flex;
-    flex-direction: column;
+    
     margin-top: 15%;
   }
   /*"layout" heading teaxt*/

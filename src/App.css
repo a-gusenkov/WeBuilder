@@ -9,14 +9,15 @@
 }
 #navBar{
   position: relative;
+ 
 }
-
 #nextButton{
   display: flex;
   align-items: center;
 }
 
 /* HomePage.js */
+
 .img-fluid-logo {
   align-items:center;
   margin-bottom: 2.5em;
@@ -34,7 +35,6 @@
 .btn-white-clr:hover{
   transform: scale(1.2);
 }
-
 /* aboutMe.js */
 
 .aboutMe{
@@ -396,13 +396,18 @@ textarea {
 
 .info-page{
   background-color: #C2A5FF; 
-  padding: 20px;
+
+  
 }
+.info-page.container{
+  padding: 3em;
+}
+
 .enter-row{
   text-align:center;
 }
 .section-description{
-  color: white;
+  color: rgb(49, 49, 49);
   padding: 10px;
   font-size:  1.5em;
 }

@@ -1,7 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useHistory } from "react-router-dom";
-import logo from './../pics/weBuilder.png';
+import logo from './../pics/weBuilder.svg';
+
+import logoHover from './../pics/weBuilder(hover).svg';
+
+/* Tried to do an effect when mouse hovers over logo
+function hover(element) {
+    element.setAttribute('src', './../pics/weBuilder(hover).svg');
+}
+
+function unhover(element) {
+     element.setAttribute('src', './../pics/weBuilder.svg');
+}
+*/
 
 function HomePage() {
 
