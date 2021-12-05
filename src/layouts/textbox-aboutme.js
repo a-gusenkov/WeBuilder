@@ -6,33 +6,34 @@ import Col from 'react-bootstrap/Col';
 import ReactDOM from 'react-dom';
 import { Plus } from 'react-bootstrap-icons';
 import {FormControl,Form} from 'react-bootstrap';
+import Cloudinary from './cloudinary';
 
 
-class TextBoxAboutMe extends React.Component {
+function TextBoxAboutMe(props) {
 
-
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.values.join(', '));
-    event.preventDefault();
+  const handleSubmit = (e) => {
+      alert('A name was submitted: ' + this.state.values.join(', '));
+      e.preventDefault();
   }
 
-  render() {
+
+  if (props.category) {
     return (
       <form onSubmit={this.handleSubmit}>
            
-           <Form.Group controlId="formFile" className="mb-3 input-file section-description">
-                <Form.Label>Input About Me Picture</Form.Label>
-                <Form.Control type="file" className="label-width"/>
-            </Form.Group>
-
-            <form>
+           
+                <p className="section-description">Input About Me Picture</p>
+                <Cloudinary />
                 <p className="section-description"> Enter Your About Me Text Here: </p>
                 <label className="label-width">
                 <textarea className="description-input" rows={5}> </textarea>
                 </label>
-            </form> 
+                <input type="submit" value="Save" />
+            
       </form>
     );
+    } else {
+      return (null);
   }
 }
 

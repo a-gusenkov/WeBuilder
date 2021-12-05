@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ReactDOM from 'react-dom';
 import { Plus } from 'react-bootstrap-icons';
+import { Dash } from 'react-bootstrap-icons';
+
 
 
 class TextBox extends React.Component {
@@ -14,24 +16,37 @@ class TextBox extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  createName(){
-     return this.state.name.map((el, i) => 
-         <div key={i}>
-            
-    	    <input type="text" name={el||''}   className="name-input" placeholder="Header Name" onChange={this.handleChangeName.bind(this, i)} />
-
-         </div>  
+  createUI(){
+    return this.state.name.map((el, i) => 
       
-     )
+        <div key={i}>
+          <input type="text" name={el||''}   className="name-input" placeholder="Header Name" onChange={this.handleChangeName.bind(this, i)} />
+          <textarea  description={el||''}  className="description-input" placeholder="Description" onChange={this.handleChangeDescription.bind(this, i)} rows={5}/>
+        </div>
+      )
+  
   }
-  createDescription(){
-       return  this.state.description.map((el, i) => 
-           <div key={i}>
-            <textarea  description={el||''}  className="description-input" placeholder="Description" onChange={this.handleChangeDescription.bind(this, i)} rows={5}/>
-            
-         </div> 
-       )
+  
+  /*
+    createName(){
+      return this.state.name.map((el, i) => 
+          <div key={i}>
+              
+            <input type="text" name={el||''}   className="name-input" placeholder="Header Name" onChange={this.handleChangeName.bind(this, i)} />
+
+          </div>  
+        
+      )
     }
+    createDescription(){
+        return  this.state.description.map((el, i) => 
+            <div key={i}>
+              <textarea  description={el||''}  className="description-input" placeholder="Description" onChange={this.handleChangeDescription.bind(this, i)} rows={5}/>
+              
+          </div> 
+        )
+      }
+    */
 
   handleChangeName(i, event) {
      let name= [...this.state.name];
@@ -48,6 +63,7 @@ class TextBox extends React.Component {
    
     this.setState(prevState => ({ name: [...prevState.name, '']}))
     this.setState(prevState => ({ description: [...prevState.description, '']}))
+    
   }
   
   removeClick(i){
@@ -61,24 +77,32 @@ class TextBox extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.values.join(', '));
+   /* alert('A name was submitted: ' + this.state.values.join(', '));
     event.preventDefault();
+    */
   }
+
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
            
-          {this.createName()}  
+          {this.createUI()}  
           <br/>
-          {this.createDescription()} 
-          <input type='button' value='remove' onClick={this.removeClick.bind(this)}/>      
+          {/* <button onClick={this.addClick.bind(this)}><Plus/></button>
+          <button onClick={this.removeClick.bind(this)}><Dash/></button>*/  }
+          <input type='button' value='remove' onClick={this.removeClick.bind(this)}/>   
           <input type='button' value='add' onClick={this.addClick.bind(this)}/>
-          <input type="submit" value="Submit" />
+
+          <input type="submit" value="Save" />
+        
       </form>
     );
   }
+
 }
+
+
 
 
 export default TextBox;

@@ -7,6 +7,7 @@
     background: #6D44C5;
     
 }
+
 #navBar{
   position: relative;
  
@@ -334,18 +335,8 @@ background: #6D44C5;
     opacity: 0.7;
 }
 
-.fa-facebook {
+.fa-github {
   background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-google {
-  background: #dd4b39;
   color: white;
 }
 
@@ -354,16 +345,20 @@ background: #6D44C5;
   color: white;
 }
 
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
 
 .fa-envelope {
   background: #125688;
   color: white;
 }
-
+/*-------------------------------layouts-------------------------*/
+.img-fluid{
+  
+  
+}
+.aboutMe{
+  margin-left: 10em;
+ 
+}
 /*-------------------------------InfoPAGE-------------------------*/
 textarea {
   -webkit-box-sizing: border-box;
@@ -420,6 +415,19 @@ textarea {
   width: 50%;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+.information-form{
+  width: 100% !important;
+}
+.link-input{
+  padding-right: 100px;
+  margin-right: 3em;
+}
+.submit-info{
+  margin-top: 3em;
+  align-content:flex-end;
+  width: 100px;
+  height: 60px;
 }
 /*-------------------------------TextBox-Components------------------------*/
 .form-control{

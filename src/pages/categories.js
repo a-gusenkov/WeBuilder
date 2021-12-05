@@ -31,6 +31,7 @@ function Categories(props) {
                         })}
 
                     </div>
+                    
                     <div className="nextBack">
                         <NextBack />
                     </div>

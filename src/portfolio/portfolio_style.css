@@ -1,0 +1,122 @@
+nav{
+    background-color: rgb(34, 34, 33);
+
+}
+body{
+    background-color: rgb(34, 34, 33) ;
+    color: rgb(211, 209, 209);
+}
+.yellow:hover{
+    color : rgb(204, 166, 255);
+}
+
+.intro{
+    padding-bottom: 4em;
+    padding-top: 5em;
+   color: rgb(233, 232, 232);
+   font-size: 1.1em;
+}
+
+.lineImg{
+   padding-top:3em;
+}
+.gitImg, .lnkImg{
+   
+    max-width: 10%;
+    padding-left: .2em;
+}
+.email{
+    font-size: 1.4em;
+    justify-content: center;
+   
+}
+.myPhoto{
+    max-width: 60%;
+}
+.textAbout{
+    align-items: center;
+
+}
+div.textAbout p{
+    font-size: 1.2em;
+}
+.exp{
+    padding-top:2em;
+    color: rgb(211, 209, 209);
+}
+h3{
+    padding-top: .5em;
+    padding-bottom: .5em;
+    color: rgb(171, 234, 253);
+}
+.titl{
+    text-align: center;
+}
+
+.schoolT{
+    font-size: 1.4em;
+    font-weight: 800;
+    padding-top: 2em;
+}
+ .schoolD{
+    font-weight: 200;
+    font-size: 1.3em;
+    font-style: italic;
+}
+.rightSide{
+   
+    font-style: italic;
+    font-size: 1.2em;
+}
+.edu{
+    font-size: 1.1em;
+}
+.projects, .projs, .graphDesign{
+    padding-top: 3em;
+}
+
+.projDes{
+    font-size: 1.2em;
+}
+
+.text{
+    color: rgb(16, 49, 80);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+.noDecor{
+    color: rgb(16, 49, 80);
+}
+.noDecor:link {
+    text-decoration: none;
+  }
+  
+.noDecor:visited {
+    text-decoration: none;
+  }
+  
+.noDecor:hover {
+    text-decoration: none;
+    color:rgb(41, 6, 39);
+  }
+  
+.noDecor:active {
+    text-decoration: none;
+  }
+
+footer{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+    color:rgb(122, 121, 120);
+}
+.thumb{
+    border: rgba(241, 198, 241);
+    border-style:solid;
+    border-width: 1px;
+    border-radius:25px;
+    padding:.5em;
+}

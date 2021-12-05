@@ -26,11 +26,14 @@ class TextBoxContactMe extends React.Component {
 
   render() {
     return (
-        <form>
-            <input type="text" name={''}   className="github-input" placeholder="GitHub Link" />
-            <input type="text" name={''}   className="linkedin-input" placeholder="LinkedIn Link" />
-            <input type="text" name={''}   className="email-input" placeholder="Email Link" />
+        <form onSubmit={this.handleSubmit}>
+            <input type="text" name={''}   className="github-input link-input" placeholder="GitHub Link" />
+            <input type="text" name={''}   className="linkedin-input link-input" placeholder="LinkedIn Link" />
+            <input type="text" name={''}   className="email-input link-input" placeholder="Email Link" />
+
+            <input type="submit" value="Save" />
         </form>
+        
     );
   }
 }

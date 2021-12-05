@@ -6,36 +6,28 @@ import Col from 'react-bootstrap/Col';
 import ReactDOM from 'react-dom';
 import { Plus } from 'react-bootstrap-icons';
 import {FormControl,Form} from 'react-bootstrap';
+import Cloudinary from './cloudinary'
 
 
 class TextBoxWPic extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name:[] , description: [] };
+    this.state = { name:[] , description: [] /*imageUrl: null, imageAlt: null,*/};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  createName(){
-     return this.state.name.map((el, i) => 
-         <div key={i}>
-                <Form.Group controlId="formFile" className="mb-3 input-file section-description">
-                <Form.Label>Input Project Picture</Form.Label>
-                <Form.Control type="file" />
-                </Form.Group> 
-    	    <input type="text" name={el||''}   className="name-input" placeholder="Header Name" onChange={this.handleChangeName.bind(this, i)} />
-
-         </div>  
+  createUI(){
+    return this.state.name.map((el, i) => 
       
-     )
+        <div key={i}>
+          <Cloudinary />
+          <input type="text" name={el||''}   className="name-input" placeholder="Header Name" onChange={this.handleChangeName.bind(this, i)} />
+          <textarea  description={el||''}  className="description-input" placeholder="Description" onChange={this.handleChangeDescription.bind(this, i)} rows={5}/>
+        </div>
+      )
+      
   }
-  createDescription(){
-       return  this.state.name.map((el, i) => 
-           <div key={i}>
-            <textarea  description={el||''}  className="description-input" placeholder="Description" onChange={this.handleChangeDescription.bind(this, i)} rows={5}/>
-            
-         </div> 
-       )
-    }
+
 
   handleChangeName(i, event) {
      let name= [...this.state.name];
@@ -66,23 +58,28 @@ class TextBoxWPic extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.values.join(', '));
+    alert('A name was submitted: ' + this.state.name.join(', '));
     event.preventDefault();
   }
 
   render() {
+    if (this.props.category) {
     return (
       <form onSubmit={this.handleSubmit}>
            
 
-          {this.createName()}  
+          {this.createUI()}  
           <br/>
-          {this.createDescription()} 
+
           <input type='button' value='remove' onClick={this.removeClick.bind(this)}/>      
           <input type='button' value='add' onClick={this.addClick.bind(this)}/>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Save" />
+          
       </form>
     );
+  } else {
+    return (null);
+  }
   }
 }
 

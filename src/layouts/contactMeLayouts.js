@@ -55,9 +55,9 @@ class ContactMeLayouts extends Component {
                                 <div className="card-block px-2">
                                     <Card.Title>Contact Me</Card.Title>
                                     
-                                    <a href={() => false} style={{ marginRight: "20%" }} className="fa fa-github"></a>
-                                    <a href={() => false} style={{ marginRight: "20%" }} className="fa fa-linkedin"></a>
-                                    <a href={() => false} style={{ marginRight: "20%" }} className="fa fa-envelope"></a>
+                                    <a href={() => false} style={{ margin: "8%" }} className="fa fa-github"></a>
+                                    <a href={() => false} style={{ margin: "8%" }} className="fa fa-linkedin"></a>
+                                    <a href={() => false} style={{ margin: "8%" }} className="fa fa-envelope"></a>
                                     
                                 </div>
                         </div>         
